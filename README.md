@@ -1,2 +1,2 @@
 # java-design-patterns
-Design patterns written in java
+Design patterns exemples written in java
