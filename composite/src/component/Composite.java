@@ -19,7 +19,12 @@ public class Composite extends Component {
 
 	public void showAllChildrenNames() {
 		System.out.println("Children names: ");
-		children.forEach(Component::showComponentName);
+		children.forEach(child -> {
+			child.showComponentName();
+			if (!child.children.isEmpty()) {
+				((Composite) child).showAllChildrenNames();
+			}
+		});
 	}
 
 }
