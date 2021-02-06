@@ -1,4 +1,8 @@
 # java-design-patterns
 Design patterns exemples written in java
 
-## Criation patterns
+## Creational patterns
+
+## Structural patterns
+
+## Behavioral patterns
