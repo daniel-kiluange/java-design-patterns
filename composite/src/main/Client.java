@@ -12,15 +12,21 @@ public class Client {
 		Component leaf0 = new Leaf();
 		Component leaf1 = new Leaf();
 
-		Composite composite0 = new Composite();
-		Composite composite1 = new Composite();
+		Component composite0 = new Composite();
+		Component composite1 = new Composite();
 
-		composite0.addChild(leaf0);
+		((Composite) composite0).addChild(leaf0);
 
-		composite1.addChild(leaf1);
-		composite1.addChild(composite0);
-		
-		composite0.showChildName(0);
+		((Composite) composite1).addChild(leaf1);
+		((Composite) composite1).addChild(composite0);
+
+		((Composite) composite0).showComponentName();
+		((Composite) composite0).showAllChildrenNames();
+
+		System.out.println("\n");
+
+		((Composite) composite1).showComponentName();
+		((Composite) composite1).showAllChildrenNames();
 
 	}
 

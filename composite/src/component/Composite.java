@@ -3,7 +3,7 @@ package component;
 public class Composite extends Component {
 
 	@Override
-	public void showCcomponentName() {
+	public void showComponentName() {
 		System.out.println("Composite name: " + this.name);
 	}
 
@@ -15,6 +15,11 @@ public class Composite extends Component {
 	@Override
 	public void showChildName(int index) {
 		super.showChildName(index);
+	}
+
+	public void showAllChildrenNames() {
+		System.out.println("Children names: ");
+		children.forEach(Component::showComponentName);
 	}
 
 }

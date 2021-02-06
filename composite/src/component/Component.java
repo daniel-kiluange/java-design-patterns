@@ -12,9 +12,9 @@ public abstract class Component {
 		this.name = UUID.randomUUID().toString();
 	}
 
-	private List<Component> children = new ArrayList<Component>();
+	protected List<Component> children = new ArrayList<Component>();
 
-	public abstract void showCcomponentName();
+	public abstract void showComponentName();
 
 	protected void addChild(Component component) {
 		this.children.add(component);
