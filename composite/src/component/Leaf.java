@@ -1,14 +1,10 @@
 package component;
 
-import java.util.UUID;
-
-public class Leaf implements Component {
-
-	private String name = UUID.randomUUID().toString();
+public class Leaf extends Component {
 
 	@Override
 	public void showCcomponentName() {
-		System.out.println("Component name: " + this.name);
+		System.out.println("Leaf name: " + this.name);
 	}
 
 }

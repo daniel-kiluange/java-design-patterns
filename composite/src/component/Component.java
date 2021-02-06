@@ -1,6 +1,26 @@
 package component;
 
-public interface Component {	
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
-	public void showCcomponentName();
+public abstract class Component {
+
+	protected String name;
+
+	public Component() {
+		this.name = UUID.randomUUID().toString();
+	}
+
+	private List<Component> children = new ArrayList<Component>();
+
+	public abstract void showCcomponentName();
+
+	protected void addChild(Component component) {
+		this.children.add(component);
+	}
+
+	protected void showChildName(int index) {
+		System.out.println(this.children.get(index).name);
+	}
 }

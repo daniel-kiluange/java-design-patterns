@@ -1,30 +1,20 @@
 package component;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
-
-public class Composite implements CompositeComponent {
-
-	private String name = UUID.randomUUID().toString();
-
-	private List<Component> components = new ArrayList<Component>();
+public class Composite extends Component {
 
 	@Override
 	public void showCcomponentName() {
-		System.out.println("Component name: " + this.name);
-
+		System.out.println("Composite name: " + this.name);
 	}
 
 	@Override
-	public void addComponent(Component component) {
-		this.components.add(component);
-
+	public void addChild(Component component) {
+		super.addChild(component);
 	}
 
 	@Override
-	public Component getChield(Integer index) {
-		return components.get(index);
+	public void showChildName(int index) {
+		super.showChildName(index);
 	}
 
 }
