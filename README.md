@@ -9,5 +9,6 @@ All of these examples were made with the support of the book Design patterns, wr
 ## Creational patterns
 
 ## Structural patterns
+- [Composite](/composite)
 
 ## Behavioral patterns
