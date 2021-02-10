@@ -5,8 +5,10 @@ All of these examples were made with the support of the book Design patterns, wr
 
 ## Learning order
 1. [Composite](/composite)
+1. [Builder](/builder)
 
 ## Creational patterns
+- [Builder](/builder)
 
 ## Structural patterns
 - [Composite](/composite)
