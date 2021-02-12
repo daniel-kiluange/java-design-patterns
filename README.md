@@ -6,6 +6,7 @@ All of these examples were made with the support of the book Design patterns, wr
 ## Learning order
 1. [Composite](/composite)
 1. [Builder](/builder)
+1. [Visitor](/visitor)
 
 ## Creational patterns
 - [Builder](/builder)
@@ -14,3 +15,4 @@ All of these examples were made with the support of the book Design patterns, wr
 - [Composite](/composite)
 
 ## Behavioral patterns
+- [Visitor](/visitor)
