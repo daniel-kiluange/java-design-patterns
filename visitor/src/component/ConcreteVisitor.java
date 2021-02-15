@@ -2,19 +2,22 @@ package component;
 
 public class ConcreteVisitor implements Visitor {
 
+  ConcreteComponent myComponent;
+
   @Override
   public void visit(Component component) {
-    doCalc((ConcreteComponent) component);
-    showNameAndCalcResult((ConcreteComponent) component);
+    this.myComponent = (ConcreteComponent) component;
+    doCalc();
+    showNameAndCalcResult();
   }
 
-  private void doCalc(ConcreteComponent component) {
-    component.setValue(component.getValue() * 0.27);
-
+  private void doCalc() {
+    this.myComponent.setValue(this.myComponent.getValue() * 0.27);
   }
 
-  private void showNameAndCalcResult(ConcreteComponent component) {
-    System.out.printf("Component name: %s, tax: %.3f", component.getName(), component.getValue());
+  private void showNameAndCalcResult() {
+    System.out.printf("Component name: %s, tax: %.3f", this.myComponent.getName(),
+        this.myComponent.getValue());
   }
 
 }
