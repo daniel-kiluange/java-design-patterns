@@ -16,7 +16,7 @@ public class StrategyClient {
     }
 
     public static void main(String[] args) {
-        var strategy = new StrategyClient(new HeavyVehicle(4), HeavyVehicleCalculator.getInstance());
+        var strategy = new StrategyClient(new HeavyVehicle(4), new HeavyVehicleCalculator());
         System.out.println(strategy.doCalc());
     }
 }
