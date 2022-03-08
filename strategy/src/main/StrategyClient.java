@@ -6,11 +6,9 @@ public class StrategyClient {
     Vehicle vehicle;
     TollCalculator calculator;
 
-    public StrategyClient(Vehicle vehicle) {
+    public StrategyClient(Vehicle vehicle,TollCalculator calculator) {
         this.vehicle = vehicle;
-
-        if (vehicle instanceof LightVehicle) calculator = new LightVehicleCalculator();
-        if (vehicle instanceof HeavyVehicle) calculator = HeavyVehicleCalculator.getInstance();
+        this.calculator = calculator;
     }
 
     private double doCalc() {
@@ -18,7 +16,7 @@ public class StrategyClient {
     }
 
     public static void main(String[] args) {
-        var strategy = new StrategyClient(new HeavyVehicle(4));
+        var strategy = new StrategyClient(new HeavyVehicle(4), HeavyVehicleCalculator.getInstance());
         System.out.println(strategy.doCalc());
     }
 }
