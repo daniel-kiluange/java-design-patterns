@@ -10,7 +10,7 @@ public class Component {
     return valueOne;
   }
 
-  public void setValueOne(String valueOne) {
+  protected void setValueOne(String valueOne) {
     this.valueOne = valueOne;
   }
 
@@ -18,7 +18,7 @@ public class Component {
     return valueTwo;
   }
 
-  public void setValueTwo(String valueTwo) {
+  protected void setValueTwo(String valueTwo) {
     this.valueTwo = valueTwo;
   }
 
@@ -26,7 +26,7 @@ public class Component {
     return valueThree;
   }
 
-  public void setValueThree(String valueThree) {
+  protected void setValueThree(String valueThree) {
     this.valueThree = valueThree;
   }
 
